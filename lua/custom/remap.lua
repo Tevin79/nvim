@@ -1,8 +1,13 @@
 -- vim.keymap.set('n', '!', '_') -- For macos only
 
+-- Ignore ' ' caracter
+vim.keymap.set('n', ' ', '<nop>')
+
 -- Center the view when moving
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Access to file viewer easily
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject files [V]iewer' })
@@ -45,6 +50,9 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>wc', '<C-w>v', { desc = 'Split window verticaly' })
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = 'Split window horizontaly' })
+vim.keymap.set('n', '<leader>wx', '<C-w>c', { desc = 'Close window' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
