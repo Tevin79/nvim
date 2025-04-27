@@ -11,6 +11,16 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Access to file viewer easily
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject files [V]iewer' })
+vim.keymap.set('n', '<leader>pm', '<cmd>!make<CR>', { desc = '[P]roject [M]ake' })
+vim.keymap.set('n', '<leader>pc', '<cmd>!make clean<CR>', { desc = '[P]roject [C]lean' })
+vim.keymap.set('n', '<leader>pr', '<cmd>!make run<CR>', { desc = '[P]roject [O]pen' })
+
+-- Git actions
+vim.keymap.set('n', '<leader>gs', '<cmd>!git status<CR>', { desc = '[G]it [S]tatus' })
+vim.keymap.set('n', '<leader>ga', '<cmd>!git add .<CR>', { desc = '[G]it [A]dd' })
+vim.keymap.set('n', '<leader>gc', '<cmd>!git commit<CR>', { desc = '[G]it [C]ommit' })
+vim.keymap.set('n', '<leader>gp', '<cmd>!git push<CR>', { desc = '[G]it [P]ush' })
+vim.keymap.set('n', '<leader>gl', '<cmd>!git pull<CR>', { desc = '[G]it [L]og' })
 
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
